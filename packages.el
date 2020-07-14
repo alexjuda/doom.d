@@ -57,3 +57,8 @@
 
 ;; Turns out we don't need it. Picture mode alreay works the same way.
 ;; (package! quarter-plane)
+
+
+;; We need explicit json major mode so Flycheck knows that it needs to apply
+;; json checkers instead of JS ones.
+(package! json-mode)
