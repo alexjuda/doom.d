@@ -80,17 +80,22 @@
 ;; Package-specific
 (setq anaconda-mode-localhost-address "localhost")
 
-;; Fix python linter errors for venv packages
-;; (defvar flycheck-python-flake8-executable "python3")
-
 ;; Run flake8 after lsp checker.
 ;; LSP is better in handling venv dependencies.
 ;; Flake8 is better in keeping proper formatting.
 ;;
+;; Python checker setup method #1 - probably doesn't work.
+;; TODO: make sure we don't need it and remove it.
 ;; flycheck<->lsp integration (lsp checker) is provided by lsp-ui-flycheck package.
 ;; Before its loaded, flycheck complains about "lsp" not being a proper checker.
 ;; (after! lsp-ui-flycheck
 ;;   (flycheck-add-next-checker 'lsp 'python-flake8))
+;;
+;; Python checker setup method #2 - simply use flake8.
+(defun aj-set-flake8-checker ()
+  (setq flycheck-checker 'python-flake8))
+
+(add-hook 'python-mode-hook #'aj-set-flake8-checker)
 
 ;; Pylint highlights valid imports as import errors for virtualenv packages.
 (setq-default flycheck-disabled-checkers '(python-pylint))
