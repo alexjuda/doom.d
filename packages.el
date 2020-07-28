@@ -64,3 +64,6 @@
 
 ;; Aligning display of CSV files is nice
 (package! csv-mode)
+
+;; Asciidoc syntax highlighting
+(package! adoc-mode)
