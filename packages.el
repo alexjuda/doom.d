@@ -67,3 +67,6 @@
 
 ;; Asciidoc syntax highlighting
 (package! adoc-mode)
+
+;; Cider support for autocompletion and other cool stuff
+(package! cider)
