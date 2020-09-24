@@ -70,3 +70,6 @@
 
 ;; Cider support for autocompletion and other cool stuff
 (package! cider)
+
+;; Dockerfile syntax hightlight
+(package! dockerfile-mode)
