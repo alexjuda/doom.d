@@ -99,3 +99,10 @@
 
 ;; Pylint highlights valid imports as import errors for virtualenv packages.
 (setq-default flycheck-disabled-checkers '(python-pylint))
+
+
+;; Indent width
+(defun aj-set-indent-width-2 ()
+  (doom/set-indent-width 2))
+
+(add-hook 'json-mode-hook #'aj-set-indent-width-2)
