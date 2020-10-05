@@ -79,9 +79,6 @@ current buffer directory."
 
 ;; ------ Keybindings ------
 
-;; (map! (:leader
-;;        (:prefix "p"
-;;         :desc "Toggle neotree" "t" #'+neotree/open)))
 (map! (:leader
        (:prefix "p"
         :desc "Toggle open buffer in neotree" "t" #'aj/neotree-project-root-dir-or-current-dir)))
@@ -116,18 +113,17 @@ current buffer directory."
 ;;   (flycheck-add-next-checker 'lsp 'python-flake8))
 ;;
 ;; Python checker setup method #2 - simply use flake8.
-(defun aj-set-flake8-checker ()
+(defun aj/set-flake8-checker ()
   (setq flycheck-checker 'python-flake8))
 
-(add-hook 'python-mode-hook #'aj-set-flake8-checker)
+(add-hook 'python-mode-hook #'aj/set-flake8-checker)
 
 ;; Pylint highlights valid imports as import errors for virtualenv packages.
 (setq-default flycheck-disabled-checkers '(python-pylint))
 
 
 ;; Indent width
-(defun aj-set-indent-width-2 ()
+(defun aj/set-indent-width-2 ()
   (doom/set-indent-width 2))
 
-(add-hook 'json-mode-hook #'aj-set-indent-width-2)
-
+(add-hook 'json-mode-hook #'aj/set-indent-width-2)
