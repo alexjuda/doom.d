@@ -77,6 +77,13 @@ current buffer directory."
             (neotree-find file-name))))))
 
 
+(defun aj/neotree-open-externally ()
+  "Open currently selected file in the default editor for this file"
+  (interactive)
+  (let* ((cmd (concat "open " (neo-buffer--get-filename-current-line))))
+    (shell-command cmd)))
+
+
 ;; ------ Keybindings ------
 
 (map! (:leader
