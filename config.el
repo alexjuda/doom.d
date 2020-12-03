@@ -135,6 +135,22 @@ current buffer directory."
 
 (add-hook 'json-mode-hook #'aj/set-indent-width-2)
 
+
+;; Disable line numbers
+(setq display-line-numbers-type nil)
+
+
+;; Customize modeline for faster scrolling
+(setq doom-modeline-buffer-state-icon nil)
+(setq doom-modeline-buffer-modification-icon nil)
+(setq doom-modeline-unicode-fallback t)
+(setq doom-modeline-minor-modes nil)
+(setq doom-modeline-enable-word-count t)
+(setq doom-modeline-continuous-word-count-modes nil)
+(setq doom-modeline-buffer-encoding nil)
+(setq doom-modeline-indent-info nil)
+
+
 ;; Handled by doom automatically
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -143,9 +159,3 @@ current buffer directory."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("3577ee091e1d318c49889574a31175970472f6f182a9789f1a3e9e4513641d86" "e1ef2d5b8091f4953fe17b4ca3dd143d476c106e221d92ded38614266cea3c8b" "730a87ed3dc2bf318f3ea3626ce21fb054cd3a1471dcd59c81a4071df02cb601" default)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
