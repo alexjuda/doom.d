@@ -136,7 +136,7 @@ current buffer directory."
 (add-hook 'json-mode-hook #'aj/set-indent-width-2)
 
 
-;; Disable line numbers
+;; Disable line numbers for faster scrolling
 (setq display-line-numbers-type nil)
 
 
