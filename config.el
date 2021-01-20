@@ -102,6 +102,15 @@ current buffer directory."
       :desc "Previous buffer" "TAB" #'evil-switch-to-windows-last-buffer
       :desc "Workspace" "W" doom-leader-workspace-map)
 
+;; enable latex preview in markdown
+;;
+;; known issues:
+;; - requires installing latex & dvipng system-wide
+;; - doesn't work if org-mode wasn't loaded before
+(map! :localleader
+      :map markdown-mode-map
+      :desc "Toggle" "l" #'org-toggle-latex-fragment)
+
 ;; Font
 (setq doom-font (font-spec :family "JetBrains Mono"))
 
