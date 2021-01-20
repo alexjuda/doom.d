@@ -135,8 +135,12 @@ current buffer directory."
 
 (add-hook 'json-mode-hook #'aj/set-indent-width-2)
 
+(defun aj/clip-copy (start end)
+  (interactive "r")
+  (shell-command-on-region start end "pbcopy")
+  (message "Copied."))
 
-;; Disable line numbers
+;; Disable line numbers for faster scrolling
 (setq display-line-numbers-type nil)
 
 
@@ -149,7 +153,6 @@ current buffer directory."
 (setq doom-modeline-continuous-word-count-modes nil)
 (setq doom-modeline-buffer-encoding nil)
 (setq doom-modeline-indent-info nil)
-
 
 ;; Fix NPE when editing cljs code
 (setq cider-enhanced-cljs-completion-p nil)
