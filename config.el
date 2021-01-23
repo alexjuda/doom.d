@@ -37,7 +37,7 @@
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
-;;
+
 ;; - `load!' for loading external *.el files relative to this one
 ;; - `use-package!' for configuring packages
 ;; - `after!' for running code after a package has loaded
@@ -153,6 +153,15 @@ current buffer directory."
 (setq doom-modeline-continuous-word-count-modes nil)
 (setq doom-modeline-buffer-encoding nil)
 (setq doom-modeline-indent-info nil)
+
+;; Smooth, pixel-level scrolling
+(good-scroll-mode 1)
+
+;; (setq good-scroll-render-rate 0.01)
+;; (setq good-scroll-step 50)
+;; (setq good-scroll-point-jump 5)
+;; (setq good-scroll-algorithm #'good-scroll-linear)
+
 
 ;; Handled by doom automatically
 (custom-set-variables

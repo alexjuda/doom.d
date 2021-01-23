@@ -73,3 +73,6 @@
 
 ;; Dockerfile syntax hightlight
 (package! dockerfile-mode)
+
+;; Smooth pixel scrolling
+(package! good-scroll)
