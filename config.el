@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "Alexander Juda"
+      user-mail-address "alexanderjuda@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -102,6 +102,15 @@ current buffer directory."
       :desc "Previous buffer" "TAB" #'evil-switch-to-windows-last-buffer
       :desc "Workspace" "W" doom-leader-workspace-map)
 
+;; enable latex preview in markdown
+;;
+;; known issues:
+;; - requires installing latex & dvipng system-wide
+;; - doesn't work if org-mode wasn't loaded before
+(map! :localleader
+      :map markdown-mode-map
+      :desc "Toggle" "l" #'org-toggle-latex-fragment)
+
 ;; Font
 (setq doom-font (font-spec :family "JetBrains Mono"))
 
@@ -162,6 +171,8 @@ current buffer directory."
 ;; (setq good-scroll-point-jump 5)
 ;; (setq good-scroll-algorithm #'good-scroll-linear)
 
+;; Fix NPE when editing cljs code
+(setq cider-enhanced-cljs-completion-p nil)
 
 ;; Handled by doom automatically
 (custom-set-variables
