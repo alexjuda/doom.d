@@ -81,3 +81,6 @@
 
 ;; Smooth pixel scrolling
 (package! good-scroll)
+
+;; Load shell's env variables
+(package! exec-path-from-shell)
