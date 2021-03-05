@@ -53,7 +53,12 @@
 ;; Disable anaconda-mode so it doesn't interfere with lsp-mode.
 ;; (package! anaconda-mode :disable t)
 
-(package! lsp-python-ms)
+;; Support for mspyls, Microsoft's Language Server for Python.
+;; For more info, see https://github.com/hlissner/doom-emacs/issues/2600#issuecomment-590938993
+;; Uncomment to enable
+;; (package! lsp-python-ms :ensure t)
+;; Uncomment to disable
+(package! lsp-python-ms :disable t)
 
 ;; Turns out we don't need it. Picture mode alreay works the same way.
 ;; (package! quarter-plane)
