@@ -164,7 +164,7 @@ current buffer directory."
 (setq doom-modeline-indent-info nil)
 
 ;; Smooth, pixel-level scrolling
-(good-scroll-mode 1)
+;; (good-scroll-mode 1)
 
 ;; (setq good-scroll-render-rate 0.01)
 ;; (setq good-scroll-step 50)
