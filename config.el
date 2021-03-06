@@ -174,6 +174,10 @@ current buffer directory."
 ;; Fix NPE when editing cljs code
 (setq cider-enhanced-cljs-completion-p nil)
 
+
+;; Fix small text size in project tree
+(setq doom-themes-neotree-line-spacing 10)
+
 ;; Handled by doom automatically
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
